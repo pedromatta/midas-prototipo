@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/page.jsx", "app/layout/ButtonNav.jsx", "app/layout/MobileHeader.jsx", "app/layout/Sidebar.jsx"  ],
   "exclude": ["node_modules"]
 }

@@ -3,6 +3,45 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* === Cores Principais (Semânticas & Estruturais) === */
+  --color-bg-light: #FDFDFA;
+  /* Creme - Background do App Light Mode */
+  --color-bg-dark: #1A3E4E;
+  /* Azul Petróleo - Sidebar, Textos Principais, Dark Mode */
+  --color-accent: #D4AF37;
+  /* Dourado - Acentos, Itens Ativos, Botões Primários */
+  --color-text-secondary: #A8A39D;
+  /* Cinza - Textos Secundários, Bordas, Desabilitados */
+  --color-success: #2E8B57;
+  /* Verde - Sucesso, Entradas, Lucros */
+  --color-alert: #CD5C5C;
+  /* Vermelho - Alertas, Saídas, Prejuízos */
+
+  /* === Cores de Categorias e Gráficos === */
+
+  /* Rendimentos (Tons Frios & Refrescantes - Cianos e Teals) */
+  --color-income-teal-dark: #218380;
+  --color-income-teal-medium: #3BB2B8;
+  --color-income-teal-light: #73D2D6;
+  --color-income-cyan-dark: #005C69;
+  --color-income-cyan-medium: #007B8C;
+
+  /* Gastos (Tons Quentes & Terrosos - Malva e Mostarda) */
+  --color-expense-mauve-dark: #936277;
+  --color-expense-mauve-medium: #AB7A92;
+  --color-expense-mauve-light: #C492B1;
+  --color-expense-mustard-dark: #E0C05C;
+  --color-expense-mustard-light: #EBD283;
+  --color-expense-secondary: #2D596B;
+  /* Petróleo Secundário para saída de Aportes */
+
+  /* Investimentos (Tons Sóbrios, Neutros e Estáveis) */
+  --color-investment-gray-dark: #8F8A84;
+  --color-investment-gray-light: #C0BDB8;
+  --color-investment-olive-dark: #243E36;
+  --color-investment-olive-medium: #365C50;
+  --color-investment-sage: #7CA982;
 }
 
 @theme inline {
