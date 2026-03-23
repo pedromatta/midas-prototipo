@@ -25,8 +25,11 @@ export const DoughnutChart = ({ data, centerText, subText, onSliceClick, t }) =>
 
     chartInstance.current = new Chart(ctx, {
       type: 'doughnut',
-      data: { labels, datasets: [{ data: dataValues, backgroundColor: backgroundColors, borderWidth: 0, hoverOffset: 4 }] },
+      data: { labels, datasets: [{ data: dataValues, backgroundColor: backgroundColors, borderWidth: 0, hoverOffset: 8 }] },
       options: {
+        layout: {
+          padding: 10
+        },
         cutout: '80%', responsive: true, maintainAspectRatio: false, animation: { duration: 500 },
         plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => ` ${ctx.label}: ${ctx.raw}%` } } },
         onClick: (event, elements) => {
@@ -49,7 +52,7 @@ export const DoughnutChart = ({ data, centerText, subText, onSliceClick, t }) =>
       <canvas ref={chartRef} className={`w-full h-full transition-all ${isError && totalPercent > 100 ? 'rounded-full ring-4 ring-[#CD5C5C] ring-offset-2 ring-offset-transparent' : ''}`}></canvas>
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
         <span className={`text-xl font-bold ${isError ? t.danger : t.textMain}`}>
-          {isError ? `Erro: ${totalPercent}%` : centerText}
+          {isError ? `${totalPercent}%` : centerText}
         </span>
         {subText && <span className={`text-sm ${t.textSec} mt-1`}>{subText}</span>}
       </div>

@@ -6,12 +6,13 @@ const SubcategoryModal = ({ t, isOpen, onClose, mode, editingSub, appData, drill
   if (!isOpen) return null;
   const isEditing = mode === 'edit';
 
-  let initialName = '', initialPercent = 0;
+  let initialName = '', initialPercent = 0, initialColor = '';
   if (isEditing && editingSub) {
     let current = appData[drillDownPath[0]];
     for (let i = 1; i < drillDownPath.length; i++) current = current.children.find(c => c.name === drillDownPath[i]);
     const child = current.children?.find(c => c.name === editingSub);
-    if (child) { initialName = child.name; initialPercent = child.percent; }
+    if (child) { initialName = child.name; initialPercent = child.percent; initialColor = child.color }
+    else { initialName = current.name; initialPercent = current.percent; initialColor = current.color }
   }
 
   return (
@@ -36,7 +37,7 @@ const SubcategoryModal = ({ t, isOpen, onClose, mode, editingSub, appData, drill
             </div>
             <div>
               <label className={`text-sm font-medium ${t.textSec}`}>Cor</label>
-              <input type="color" defaultValue={isEditing ? (t.isDark ? "#D4AF37" : "#1A3E4E") : "#D4AF37"} className="w-full h-12 mt-1 rounded-xl cursor-pointer border-0 bg-transparent p-0" />
+              <input type="color" defaultValue={initialColor} className="w-full h-12 mt-1 rounded-xl cursor-pointer border-0 bg-transparent p-0" />
             </div>
           </div>
         </div>

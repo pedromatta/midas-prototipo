@@ -53,9 +53,11 @@ export const DrillDownView = ({ t, appData, drillDownPath, setDrillDownPath, han
             <div className="w-10 h-10 rounded-full flex items-center justify-center text-[#FDFDFA] mr-4 shadow-sm" style={{ backgroundColor: currentNode.color || '#A8A39D' }}>
               {isInvestment ? <LineChart size={20} /> : <Wallet size={20} />}
             </div>
-            <div>
-              <h3 className={`text-xl font-bold ${t.textMain}`}>{currentNode.name}</h3>
-              <p className={`text-sm ${t.textSec}`}>Configurações da categoria final</p>
+            <div className="w-full flex justify-between">
+              <div>
+                <h3 className={`text-xl font-bold ${t.textMain}`}>{currentNode.name}</h3>
+              </div>
+              <button onClick={() => openSubModal('edit', currentNode.name)} className={`${t.textSec} hover:text-[#D4AF37] hover:bg-[#D4AF37]/10 p-1.5 rounded-md transition-colors`}><Edit2 size={18} /></button>
             </div>
           </div>
           {isInvestment ? (
@@ -140,7 +142,7 @@ export const DrillDownView = ({ t, appData, drillDownPath, setDrillDownPath, han
       {/* Categorias (Gráfico + Sliders) */}
       {!isLeafNode && (
         <>
-          <DoughnutChart data={children} centerText={isInvestment ? "Meta: 100%" : "100% Alocado"} total={currentNode.target || currentNode.total} onSliceClick={handleChildClick} t={t} />
+          <DoughnutChart data={children} centerText={"100%"} total={currentNode.target || currentNode.total} onSliceClick={handleChildClick} t={t} />
           <div className="space-y-4">
             {children.map((child, idx) => {
               const parentTotal = isInvestment ? (currentNode.current || currentNode.total || 1) : (currentNode.target || currentNode.total || 1);
