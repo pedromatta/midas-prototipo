@@ -1,3 +1,5 @@
+import { auxNavItems } from "../data/mockData";
+
 const MobileMenu = ({ t, activeTab, navigateToTab }) => (
   <div className={`md:hidden fixed inset-0 top-16 ${t.sidebar} z-30 p-4 animate-in slide-in-from-top-2 border-b ${t.border}`}>
     <nav className="space-y-2">
