@@ -1,5 +1,5 @@
 import { navItems } from '../data/mockData';
-import { auxNavItems } from '../data/mockData';
+// import { auxNavItems } from '../data/mockData';
 import {
   X, Sun, Moon
 } from 'lucide-react';
@@ -13,12 +13,12 @@ const Sidebar = ({ t, activeTab, navigateToTab, setIsDark }) => (
           <item.icon className="mr-3" size={20} /><span>{item.label}</span>
         </button>
       ))}
-      <div className="my-6 border-t border-[#A8A39D]/20"></div>
-      {auxNavItems.map(item => (
-        <button key={item.id} onClick={() => navigateToTab(item.id, item.rootNode)} className={`w-full flex items-center px-4 py-3 rounded-xl transition-all ${activeTab === item.id ? 'bg-[#D4AF37] text-[#1A3E4E] font-bold shadow-md' : 'text-[#A8A39D] hover:bg-[#A8A39D]/10 hover:text-[#D4AF37]'}`}>
-          <item.icon className="mr-3" size={20} /><span>{item.label}</span>
-        </button>
-      ))}
+      {/* <div className="my-6 border-t border-[#A8A39D]/20"></div> */}
+      {/* {auxNavItems.map(item => ( */}
+      {/*   <button key={item.id} onClick={() => navigateToTab(item.id, item.rootNode)} className={`w-full flex items-center px-4 py-3 rounded-xl transition-all ${activeTab === item.id ? 'bg-[#D4AF37] text-[#1A3E4E] font-bold shadow-md' : 'text-[#A8A39D] hover:bg-[#A8A39D]/10 hover:text-[#D4AF37]'}`}> */}
+      {/*     <item.icon className="mr-3" size={20} /><span>{item.label}</span> */}
+      {/*   </button> */}
+      {/* ))} */}
     </nav>
     <div className="p-4 mt-auto mb-4 border-t border-[#A8A39D]/20">
       <button onClick={() => setIsDark(!t.isDark)} className="w-full flex items-center px-4 py-3 rounded-xl text-[#A8A39D] hover:bg-[#A8A39D]/10 hover:text-[#D4AF37] transition-all">

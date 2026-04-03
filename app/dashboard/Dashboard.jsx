@@ -37,11 +37,11 @@ const Dashboard = ({ t, openTxModal }) => (
       </div>
       <div className="w-full h-6 bg-[#A8A39D]/20 rounded-full overflow-hidden flex">
         <div className="h-full bg-[#CD5C5C]" style={{ width: '65%' }}></div>
-        <div className="h-full bg-[#1A3E4E]" style={{ width: '20%' }}></div>
+        <div className="h-full bg-[#D4AF37]" style={{ width: '20%' }}></div>
       </div>
       <div className={`flex space-x-4 mt-2 text-xs ${t.textSec}`}>
         <div className="flex items-center"><div className="w-3 h-3 bg-[#CD5C5C] rounded-full mr-1"></div> Gastos</div>
-        <div className="flex items-center"><div className="w-3 h-3 bg-[#1A3E4E] rounded-full mr-1"></div> Investimentos</div>
+        <div className="flex items-center"><div className="w-3 h-3 bg-[#D4AF37] rounded-full mr-1"></div> Investimentos</div>
       </div>
     </div>
     <div className="flex flex-col sm:flex-row gap-4 mt-8">

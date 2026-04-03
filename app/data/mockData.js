@@ -6,7 +6,9 @@ import {
   Search, ChevronLeft, ChevronRight, ArrowUpCircle,
   ArrowDownCircle, MoreVertical, Calendar, Check,
   FolderOpen, RefreshCw, TerminalSquare, X, Trash2, Edit2, Database,
-  Sun, Moon, TrendingUp
+  Sun, Moon, TrendingUp,
+  BanknoteArrowUp,
+  BanknoteArrowDown
 } from 'lucide-react';
 
 // ==========================================
@@ -46,7 +48,7 @@ export const initialData = {
         ]
       },
       {
-        name: 'Investimentos', percent: 20, current: 2000, target: 2000, color: '#1A3E4E', children: [
+        name: 'Aportes', percent: 20, current: 2000, target: 2000, color: '#1A3E4E', children: [
           { name: 'Envio Corretora', percent: 100, current: 2000, target: 2000, color: '#2D596B' }
         ]
       }
@@ -77,21 +79,21 @@ export const initialData = {
 };
 
 export const initialTransactions = [
-  { id: 1, desc: 'Salário Mensal', path: 'Rendimentos > Salário > Fixo', date: '05 Set 2024', value: 6300.00, type: 'in' },
-  { id: 2, desc: 'Aluguel Apto', path: 'Gastos > Gastos Fixos > Aluguel', date: '06 Set 2024', value: -3000.00, type: 'out' },
-  { id: 3, desc: 'Supermercado Extra', path: 'Gastos > Variáveis > Mercado', date: '10 Set 2024', value: -850.20, type: 'out' },
-  { id: 4, desc: 'Aporte Mensal', path: 'Gastos > Investimentos', date: '12 Set 2024', value: -2000.00, type: 'out' },
-  { id: 5, desc: 'Freelance Design', path: 'Rendimentos > Freelance > Cliente A', date: '15 Set 2024', value: 1500.00, type: 'in' },
+  { id: 1, desc: 'Salário Mensal', path: 'Rendimentos > Salário > Fixo', date: '05 Mar 2026', value: 6300.00, type: 'in' },
+  { id: 2, desc: 'Aluguel Apto', path: 'Gastos > Gastos Fixos > Aluguel', date: '06 Mar 2026', value: -3000.00, type: 'out' },
+  { id: 3, desc: 'Supermercado Extra', path: 'Gastos > Variáveis > Mercado', date: '10 Mar 2026', value: -850.20, type: 'out' },
+  { id: 4, desc: 'Aporte Mensal', path: 'Gastos > Investimentos', date: '12 Mar 2026', value: -2000.00, type: 'out' },
+  { id: 5, desc: 'Freelance Design', path: 'Rendimentos > Freelance > Cliente A', date: '15 Mar 2026', value: 1500.00, type: 'in' },
 ];
 
 export const navItems = [
   { id: 'dashboard', icon: LayoutDashboard, label: 'Dashboard' },
   { id: 'transactions', icon: ListOrdered, label: 'Transações' },
-  { id: 'gastos', icon: Wallet, label: 'Gastos', rootNode: 'Gastos' },
-  { id: 'investimentos', icon: LineChart, label: 'Investimentos', rootNode: 'Investimentos' },
-];
-
-export const auxNavItems = [
-  { id: 'rendimentos', icon: ArrowUpCircle, label: 'Rendimentos', rootNode: 'Rendimentos' },
+  { id: 'investimentos', icon: Wallet, label: 'Investimentos', rootNode: 'Investimentos' },
+  { id: 'gastos', icon: BanknoteArrowDown, label: 'Gastos', rootNode: 'Gastos' },
+  { id: 'rendimentos', icon: BanknoteArrowUp, label: 'Rendimentos', rootNode: 'Rendimentos' },
   { id: 'settings', icon: Settings, label: 'Configurações' },
 ];
+
+// export const auxNavItems = [
+// ];

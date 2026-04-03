@@ -9,7 +9,7 @@ const Transactions = ({ t, transactions, openTxModal }) => (
     <div className={`sticky top-0 ${t.bgMain} z-10 pt-6 px-4 pb-4 border-b ${t.border} space-y-4 transition-colors`}>
       <div className="flex justify-between items-center px-4">
         <button className={`p-2 ${t.hover} rounded-full ${t.textMain}`}><ChevronLeft size={20} /></button>
-        <h2 className={`text-lg font-bold ${t.textMain}`}>Setembro 2024</h2>
+        <h2 className={`text-lg font-bold ${t.textMain}`}>Março 2026</h2>
         <button className={`p-2 ${t.hover} rounded-full ${t.textMain}`}><ChevronRight size={20} /></button>
       </div>
       <div className="relative">

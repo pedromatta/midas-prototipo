@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { initialData, initialTransactions } from './data/mockData'
 import { getThemeTokens } from './utils/theme'
 import Sidebar from './layout/Sidebar'
-import BottomNav from './layout/BottomNav'
+// import BottomNav from './layout/BottomNav'
 import MobileMenu from './layout/MobileMenu'
 import MobileHeader from './layout/MobileHeader'
 import Dashboard from './dashboard/Dashboard'
@@ -130,7 +130,7 @@ export default function App() {
         {activeTab === 'settings' && <SettingsView t={t} />}
       </main>
 
-      <BottomNav t={t} activeTab={activeTab} navigateToTab={navigateToTab} />
+      {/* <BottomNav t={t} activeTab={activeTab} navigateToTab={navigateToTab} /> */}
 
       {/* Overlays / Modals */}
       <TransactionModal t={t} isOpen={isTxModalOpen} onClose={() => setIsTxModalOpen(false)} editingTx={editingTx} />
