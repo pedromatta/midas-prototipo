@@ -4,7 +4,7 @@ import {
 
 const SettingsView = ({ t }) => (
   <div className="p-6 max-w-4xl mx-auto space-y-8 pb-24">
-    <h1 className={`text-3xl font-bold ${t.textMain} mb-6`}>Configurações e Sistema</h1>
+    <h1 className={`text-3xl font-bold ${t.textMain} mb-6`}>Configurações</h1>
     <section className="space-y-4">
       <h2 className={`text-xl font-bold ${t.textMain} flex items-center border-b ${t.border} pb-2`}><FolderOpen className="mr-2" /> Armazenamento</h2>
       <div className="space-y-3">
