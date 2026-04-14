@@ -113,7 +113,7 @@ export default function App() {
     <div className={`min-h-screen ${t.bgMain} flex flex-col md:flex-row font-sans transition-colors duration-300`}>
 
       <Sidebar t={t} activeTab={activeTab} navigateToTab={navigateToTab} setIsDark={setIsDark} />
-      <MobileHeader t={t} setIsDark={setIsDark} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
+      <MobileHeader t={t} activeTab={activeTab} navigateToTab={navigateToTab} setIsDark={setIsDark} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
       {isMobileMenuOpen && <MobileMenu t={t} activeTab={activeTab} navigateToTab={navigateToTab} />}
 
       <main className="flex-1 md:ml-64 relative transition-colors duration-300">
